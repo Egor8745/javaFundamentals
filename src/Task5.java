@@ -4,14 +4,14 @@ import java.io.InputStreamReader;
 
 public class Task5 {//Ввести число от 1 до 12. Вывести на консоль название месяца, соответствующего данному числу. Осуществить проверку корректности ввода чисел.
 
-    //переписать с case. проверять в отдельном методе и возвращать строку
+    //из getNumberMonth отдавать строку месяца и печатать из main
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int month = Integer.parseInt(reader.readLine());
-        int numberMonth = getNumberMonth(month);
-        if (numberMonth>12||numberMonth<1){
+        if (month > 12 || month < 1) {
             System.out.println("Такого месяца не существует");
         }
+//        int numberMonth = getNumberMonth(month);
     }
 
     private static int getNumberMonth(int number) {
@@ -52,7 +52,6 @@ public class Task5 {//Ввести число от 1 до 12. Вывести н�
             case 12:
                 System.out.println("Декабрь");
                 break;
-
         }
         return number;
     }
