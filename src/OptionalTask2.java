@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OptionalTask2 {
+public class OptionalTask2 { //Вывести числа в порядке возрастания (убывания) значений их длины.
     public static void main(String[] args) {
         System.out.println("Введите N");
         Scanner in = new Scanner(System.in);

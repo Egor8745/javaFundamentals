@@ -7,17 +7,21 @@ public class Task5 {//Ввести число от 1 до 12. Вывести н�
     //из getNumberMonth отдавать строку месяца и печатать из main
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int month = Integer.parseInt(reader.readLine());
-        if (month > 12 || month < 1) {
-            System.out.println("Такого месяца не существует");
-        }
-//        int numberMonth = getNumberMonth(month);
+        int intMonth = Integer.parseInt(reader.readLine());
+        String month = getNumberMonth(intMonth);
+        System.out.println(month);
     }
 
-    private static int getNumberMonth(int number) {
-        switch (number) {
+
+
+    private static String getNumberMonth(int intMonth) {
+        if (intMonth < 1 || intMonth > 12) {
+            return "Такого месяца не существует";
+        }
+        String month = null;
+        switch (intMonth) {
             case 1:
-                System.out.println("Январь");
+                month = "Январь";
                 break;
             case 2:
                 System.out.println("Февраль");
@@ -52,8 +56,11 @@ public class Task5 {//Ввести число от 1 до 12. Вывести н�
             case 12:
                 System.out.println("Декабрь");
                 break;
+            default:
+                System.out.println("Такого месяца не существует");
+
         }
-        return number;
+        return month;
     }
 }
 

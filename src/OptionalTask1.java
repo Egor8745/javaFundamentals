@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//TODO
 public class OptionalTask1 {// Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
                             // самое короткое (самое большое число). Самое длинное (самое маленькое)
     public static void main(String[] args) {

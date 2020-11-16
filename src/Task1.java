@@ -7,8 +7,6 @@ public class Task1 {        //Приветствовать любого поль
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String Name = reader.readLine();
         System.out.println("HELLO " + Name);
-
-
     }
 
 
