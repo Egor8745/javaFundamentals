@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 //TODO
 public class OptionalTask1 {// Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
-                            // самое короткое (самое большое число). Самое длинное (самое маленькое)
+
+    // самое короткое (самое большое число). Самое длинное (самое маленькое)
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String line = scan.nextLine();
@@ -12,10 +13,11 @@ public class OptionalTask1 {// Найти самое короткое и сам�
         for (int i = 0; i < strings.length; i++) {
             int currentInt = Integer.parseInt(strings[i]);
             int numberLength = getNumberLength(currentInt);
-            if (i == 0 || numberLength > getNumberLength(maxNumber)) {
+            if (i == 0 || numberLength > getNumberLength(maxNumber) || (maxNumber > currentInt && numberLength == getNumberLength(maxNumber))) {
                 maxNumber = currentInt;
             }
-            if (i == 0 || numberLength < getNumberLength(minNumber)) {
+
+            if (i == 0 || numberLength <= getNumberLength(minNumber) && minNumber < currentInt) {
                 minNumber = currentInt;
             }
         }
