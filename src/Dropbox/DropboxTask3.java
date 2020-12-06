@@ -1,7 +1,6 @@
-/**
- * Created by acer on 28.11.2020.
- */
-public class Dropbox3 {
+package Dropbox;
+
+public class DropboxTask3 {
     public static void main(String[] args) {//Определить сумму элементов целочисленного массива,расположенных между минимальным и максимальным значениями
         int[] array = new int[100];
         int g = 0;

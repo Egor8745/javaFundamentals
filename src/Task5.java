@@ -13,51 +13,50 @@ public class Task5 {//Ввести число от 1 до 12. Вывести н�
     }
 
 
-
     private static String getNumberMonth(int intMonth) {
         if (intMonth < 1 || intMonth > 12) {
             return "Такого месяца не существует";
         }
-        String month = null;
+        String month ;
         switch (intMonth) {
             case 1:
                 month = "Январь";
                 break;
             case 2:
-                System.out.println("Февраль");
+                month = "Февраль";
                 break;
             case 3:
-                System.out.println("Март");
+                month = "Март";
                 break;
             case 4:
-                System.out.println("Апрель");
+                month = "Апрель";
                 break;
             case 5:
-                System.out.println("Май");
+                month = "Май";
                 break;
             case 6:
-                System.out.println("Июнь");
+                month = "Июнь";
                 break;
             case 7:
-                System.out.println("Июль");
+                month = "Июль";
                 break;
             case 8:
-                System.out.println("Август");
+                month = "Август";
                 break;
             case 9:
-                System.out.println("Сентябрь");
+                month = "Сентябрь";
                 break;
             case 10:
-                System.out.println("Октябрь");
+                month = "Октябрь";
                 break;
             case 11:
-                System.out.println("Ноябрь");
+                month = "Ноябрь";
                 break;
             case 12:
-                System.out.println("Декабрь");
+                month = "Декабрь";
                 break;
             default:
-                System.out.println("Такого месяца не существует");
+                month = "Такого месяца не существует";
 
         }
         return month;
