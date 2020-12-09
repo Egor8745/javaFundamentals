@@ -14,11 +14,27 @@ public class DropboxTask4 {
             array[i] = random;
             System.out.print(array[i] + " ");
         }
-        if (array[0] < array[1] && array[1] < array[2] && array[2] < array[3]) {
-            System.out.println("Массив строго возрастающей последовательности ");
-            //переделать isArrayGrowing
+        boolean sout = isArrayGrowing(array);
+        if (sout == true) {
+            System.out.println(" Массив строго возрастающей последовательности");
         }
     }
+
+    private static boolean isArrayGrowing(int[] array) {
+        boolean a = true;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i - 1] < array[i]) {
+                a = true;
+            } else {
+                a = false;
+                break;
+            }
+
+        }
+        return a;
+    }
 }
+
+
 
 
