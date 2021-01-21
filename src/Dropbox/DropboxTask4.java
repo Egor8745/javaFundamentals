@@ -6,7 +6,7 @@ package Dropbox;
 public class DropboxTask4 {
     //Создать массив из 4 случайных целых чисел из отрезка [10;99],вывести его на экран в строку./
 
-    // Определить и вывести на экран сообщение о том, является лимассив строго возрастающей последовательностью.
+    // Определить и вывести на экран сообщение о том, является ли массив строго возрастающей последовательностью.
     public static void main(String[] args) {
         int[] array = new int[4];
         for (int i = 0; i < array.length; i++) {
@@ -14,24 +14,19 @@ public class DropboxTask4 {
             array[i] = random;
             System.out.print(array[i] + " ");
         }
-        boolean sout = isArrayGrowing(array);
-        if (sout == true) {
+
+        if (isArrayGrowing(array)) {
             System.out.println(" Массив строго возрастающей последовательности");
         }
     }
 
     private static boolean isArrayGrowing(int[] array) {
-        boolean a = true;
         for (int i = 1; i < array.length; i++) {
-            if (array[i - 1] < array[i]) {
-                a = true;
-            } else {
-                a = false;
-                break;
+            if (array[i - 1] >= array[i]) {
+                return false;
             }
-
         }
-        return a;
+        return true;
     }
 }
 

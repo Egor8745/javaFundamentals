@@ -6,25 +6,28 @@ package Dropbox;
  */
 public class DropboxTask2 {//Напишите программу, заносящую в массив первые 100 натуральных чисел, делящихся на 13 или на 17, и печатающую его
 
-    public static void main(String[] args) {//Определить сумму элементов целочисленного массива,расположенных между минимальным и максимальным значениями
+    public static void main(String[] args) {
         int[] array = new int[100];
-        int g = 0;
+        int naturalNumber = 0;
         int i = 0;
         while (i < array.length) {
-            if (g % 13 == 0 || g % 17 == 0) {
-                array[i] = g;
-                g++;
+            if (naturalNumber % 13 == 0 || naturalNumber % 17 == 0) {
+                array[i] = naturalNumber;
                 i++;
-            } else {
-                g++;
             }
+            naturalNumber++;
         }
         printArray(array);
     }
 
-    private static void printArray(int[] array) {
+    protected static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            if (i != array.length - 1) {
+                System.out.print(array[i] + ", ");
+            } else {
+                System.out.println(array[i]);
+            }
+
         }
     }
 }
