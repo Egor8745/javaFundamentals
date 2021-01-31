@@ -1,30 +1,33 @@
 package Dropbox;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by Egor on 11.01.2021.
  */
 public class DropboxTask8 {
-    public static void main(String[] args) {//Написать программу, перемешивающую и печатающую списоккарт в колоде. Воспользоваться результатом предыдущей задачи.
-//        String[][] card = getCards
-        for (int i = 0; i < 13; ) {
-//            i = (int) (Math.random() * Card.length);
-            for (int j = 0; j < 4; ) {
-                j = (int) (Math.random() * 4);
-//                System.out.println("Random card: "+ Card[i][j]);
-                break;
+    public static void main(String[] args) {
+        DropboxTask7.getOfCards();
+        String[][] array = DropboxTask7.getOfCards();
+        shuffleTheDeck(array);
+    }
+
+    protected static void shuffleTheDeck(String[][] shuffle) {
+        for (int i = 0; i < shuffle.length; i++) {
+            for (int j = 0; j < shuffle[i].length; j++) {
+                int randomIndex1 = (int) (Math.random() * 13);
+                int randomIndex2 = (int) (Math.random() * 4);
+                String rnd = shuffle[i][j];
+                shuffle[i][j] = shuffle[randomIndex1][randomIndex2];
+                shuffle[randomIndex1][randomIndex2] = rnd;
             }
-            break;
         }
-        for (int i = 0; i < 13; i++) {
-            for (int j = 0; j < 4; j++) {
-//                System.out.println(" " + Card[i][j] + " ");
+        for (int i = 0; i < shuffle.length; i++) {
+            for (int j = 0; j < shuffle[i].length; j++) {
+                System.out.println(shuffle[i][j]);
             }
         }
     }
-    //todo user method getCards from task7
-    }
+
+}
+
 

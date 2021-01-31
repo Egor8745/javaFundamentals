@@ -43,7 +43,7 @@ public class DropboxTask3 {
         return sum;
     }
 
-    private static int[] generateRandomIntArray(int arrayLength) {
+    protected static int[] generateRandomIntArray(int arrayLength) {
         if (arrayLength < 1) {
             System.out.println("N/A array");
             return null;

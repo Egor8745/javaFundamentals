@@ -20,7 +20,7 @@ public class DropboxTask4 {
         }
     }
 
-    private static boolean isArrayGrowing(int[] array) {
+    protected static boolean isArrayGrowing(int[] array) {
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] >= array[i]) {
                 return false;

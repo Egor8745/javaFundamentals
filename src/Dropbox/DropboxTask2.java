@@ -20,7 +20,7 @@ public class DropboxTask2 {//Напишите программу, заносящ
         printArray(array);
     }
 
-    protected static void printArray(int[] array) {
+    public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (i != array.length - 1) {
                 System.out.print(array[i] + ", ");
