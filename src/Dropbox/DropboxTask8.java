@@ -4,7 +4,7 @@ package Dropbox;
 /**
  * Created by Egor on 11.01.2021.
  */
-public class DropboxTask8 {
+public class DropboxTask8 {//Написать программу, перемешивающую и печатающую список карт в колоде. Воспользоваться результатом предыдущей задачи
     public static void main(String[] args) {
         DropboxTask7.getOfCards();
         String[][] array = DropboxTask7.getOfCards();
